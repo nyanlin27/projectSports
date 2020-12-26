@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// For Backend
+Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
+Route::resource('posts', 'PostController');
