@@ -19,3 +19,4 @@ Route::get('/', function () {
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
 Route::resource('posts', 'PostController');
+Route::resource('leagues', 'LeagueController');

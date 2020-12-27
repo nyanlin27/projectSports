@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\League;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class LeagueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id', 'desc')->get();
+        $leagues = League::orderBy('id', 'desc')->get();
         // dd($posts);
-        return view('backend.posts.index', compact('posts'));
+        return view('backend.leagues.index', compact('leagues'));
     }
 
     /**
@@ -26,8 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-
-        return view('backend.posts.create');
+        return view('backend.leagues.create');
     }
 
     /**
@@ -38,13 +37,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // var_dumb
         // dd($request);
-
         // Validation
         $request->validate([
             'name' => 'required|min:3',
-            'description' => 'required|min:3',
             'photo' => 'required|mimes:png,jpg,jpeg'
         ]);
         //  Upload
@@ -52,26 +48,25 @@ class PostController extends Controller
             // File Name Change
             $fileName = time() . '_' . $request->photo->getClientOriginalName();
             //categoryimg change
-            $filePath = $request->file('photo')->storeAs('postimg', $fileName, 'public');
+            $filePath = $request->file('photo')->storeAs('leagueimg', $fileName, 'public');
             $path = '/storage/' . $filePath;
         }
         // Store Data
-        $post = new Post;
-        $post->name = $request->name;
-        $post->description = $request->description;
-        $post->photo = $path;
-        $post->save();
+        $league = new League;
+        $league->name = $request->name;
+        $league->photo = $path;
+        $league->save();
         // redirect
-        return redirect()->route('posts.index');
+        return redirect()->route('leagues.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(League $league)
     {
         //
     }
@@ -79,29 +74,27 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(League $league)
     {
-        return view('backend.posts.edit', compact('post'));
+        return view('backend.leagues.edit', compact('league'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, League $league)
     {
-        // var_dumb
         // dd($request);
         // Validation
         $request->validate([
             'name' => 'required|min:3',
-            'description' => 'required|min:3',
             'photo' => 'sometimes|mimes:png,jpg,jpeg'
         ]);
         //  Upload
@@ -109,27 +102,26 @@ class PostController extends Controller
             // File Name Change
             $fileName = time() . '_' . $request->photo->getClientOriginalName();
             //categoryimg change
-            $filePath = $request->file('photo')->storeAs('postimg', $fileName, 'public');
+            $filePath = $request->file('photo')->storeAs('leagueimg', $fileName, 'public');
             $path = '/storage/' . $filePath;
-            $post->photo = $path;
+            $league->photo = $path;
         }
         // Store Data
-        $post->name = $request->name;
-        $post->description = $request->description;
-        $post->save();
-
-        return redirect()->route('posts.index');
+        $league->name = $request->name;
+        $league->save();
+        // redirect
+        return redirect()->route('leagues.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(League $league)
     {
-        $post->delete();
-        return redirect()->route('posts.index');
+        $league->delete();
+        return redirect()->route('leagues.index');
     }
 }

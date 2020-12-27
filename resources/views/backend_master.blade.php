@@ -166,7 +166,56 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{ route('dashboardpage') }}">
+                <i class="mdi mdi-home menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Post</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('posts.create') }}">
+                    Create Post</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('posts.index') }}">Post List</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                  <i class="mdi mdi-circle-outline menu-icon"></i>
+                  <span class="menu-title">Leagues</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('leagues.create') }}">Create League</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('leagues.index') }}">View List</a></li>
+                  </ul>
+                </div>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#match" aria-expanded="false" aria-controls="match">
+                    <i class="mdi mdi-grid-large menu-icon"></i>
+                  <span class="menu-title">Match</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="match">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">
+                      Create Match</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Match Table</a></li>
+                  </ul>
+                </div>
+            </li>
+          </ul>
+          {{-- <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('dashboardpage') }}">
                 <i class="mdi mdi-home menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
@@ -174,13 +223,13 @@
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="mdi mdi-circle-outline menu-icon"></i>
-                <span class="menu-title">UI Elements</span>
+                <span class="menu-title">Leagues</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('leagues.index') }}">View League List</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('leagues.create') }}">Create League</a></li>
                 </ul>
               </div>
             </li>
@@ -211,16 +260,13 @@
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <i class="mdi mdi-account menu-icon"></i>
-                <span class="menu-title">User Pages</span>
+                <span class="menu-title">Posts</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('posts.index') }}"> View Post List </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ route('posts.create') }}"> Create Post </a></li>
                 </ul>
               </div>
             </li>
@@ -230,15 +276,22 @@
                 <span class="menu-title">Documentation</span>
               </a>
             </li>
-          </ul>
+          </ul> --}}
         </nav>
 {{-- //----------------------------End Navbar-------------------------------- --}}
 
 {{-- //----------------------------Srart-------------------------------------- --}}
-    @yield('content')
 
-  </div>
+@yield('content')
+</div>
+  <footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.urbanui.com/" target="_blank">Urbanui</a>. All rights reserved.</span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+    </div>
+  </footer>
   <!-- container-scroller -->
+
 
   <!-- plugins:js -->
   <script src="{{ asset('backend_asset/vendors/base/vendor.bundle.base.js') }}"></script>
@@ -252,6 +305,8 @@
   <script src="{{ asset('backend_asset/js/off-canvas.js') }}"></script>
   <script src="{{ asset('backend_asset/js/hoverable-collapse.js') }}"></script>
   <script src="{{ asset('backend_asset/js/template.js') }}"></script>
+<!-- Custom js for this page-->
+<script src="{{ asset('backend_asset/js/file-upload.js') }}"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{{ asset('backend_asset/js/dashboard.js') }}"></script>

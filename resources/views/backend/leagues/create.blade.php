@@ -5,31 +5,24 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('posts.index') }}" class="btn btn-danger btn-sm my-2 float-right"> <i class="mdi mdi-chevron-double-left menu-icon
+                    <a href="{{ route('leagues.index') }}" class="btn btn-danger btn-sm my-2 float-right"> <i class="mdi mdi-chevron-double-left menu-icon
                         "></i> Back</a>
-                <h4 class="card-title">Write Post</h4>
+                <h4 class="card-title">Create League</h4>
                 <p class="card-description">
-                    write post
+                    create league
                 </p>
 
-                <form class="forms-sample" action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+                <form class="forms-sample" action="{{ route('leagues.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="exampleInputName1">Post Title</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="name" value="{{ old('name') }}" id="exampleInputName1" placeholder="post title" name="name">
+                        <label for="exampleInputName1">League Name</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="name" value="{{ old('name') }}" id="exampleInputName1" placeholder="league name" name="name">
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                     </div>
                     <div class="form-group">
-                        <label for="exampleTextarea1">Description</label>
-                        <textarea type="text" placeholder="Enter Description" name="description"  id="exampleTextarea1" rows="20" placeholder="description" name="description" class="form-control @error('description') is-invalid @enderror" value=" ">{{ old('description') }}</textarea>
-                        @error('description')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label>Upload</label>
+                        <label>League Photo</label>
                         <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" type="text" placeholder="Enter Post Photo" name="photo" value="{{ old('photo') }}">
                         <div class="input-group col-xs-12">
                             <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
@@ -41,7 +34,7 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2">Save</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>
                 </div>

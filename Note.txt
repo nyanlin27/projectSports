@@ -1,0 +1,75 @@
+SPORTS
+-----------
+
+For Frontend
+----------------------------------------------
+    Navbar
+        -   Home
+        -   News
+        -   Leagues
+            -   Champions League
+            -   Europa League
+            -   Premier League
+            -   Laliga
+            -   Bundesliga
+            -   Ligue 1
+            -   Serie A
+        -   Matchs
+            -   All Matchs
+            -   Champions League
+            -   Europa League
+            -   Premier League
+            -   Laliga
+            -   Bundesliga
+            -   Ligue 1
+            -   Serie A
+        -   Table
+            -   Champions League
+            -   Europa League
+            -   Premier League
+            -   Laliga
+            -   Bundesliga
+            -   Ligue 1
+            -   Serie A
+        -   About
+        -   Contact
+
+
+
+For Backend
+-----------------------------------------------
+
+Posts Table ( News=> Frontend)
+	-	id
+	-	Title(String)
+	-	Description(text)
+	-	Photo(String)
+	-	date / time
+
+Leagues Table
+	-	id
+	-	name
+    -   photo
+	-	date / time
+
+Temas Table
+	-	id
+	-	name
+    -   photo
+	-	league_id
+	-	date / time
+
+Matchs Table
+	-	id
+    -   name
+	-	league_id
+	-	team_id
+	-	date / time
+
+Height Light
+    -   id
+    -   name
+    -   heightlight video
+    -   date / time
+
+

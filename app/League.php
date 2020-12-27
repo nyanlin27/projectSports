@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class League extends Model
 {
     protected $fillable = [
-        'name', 'description', 'photo',
+        'name', 'photo',
     ];
 }
