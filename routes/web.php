@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('frontend/frontend_master');
+// });
+
+// For Forntend
+Route::get('/','FrontendController@index')->name('homepage');
+
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
 Route::resource('posts', 'PostController');
