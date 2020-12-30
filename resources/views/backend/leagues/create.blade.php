@@ -22,6 +22,13 @@
                             @enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputName1">Country</label>
+                        <input type="text" class="form-control @error('country') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="country" value="{{ old('country') }}" id="exampleInputName1" placeholder="league name" name="country">
+                            @error('country')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group">
                         <label>League Photo</label>
                         <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" type="text" placeholder="Enter Post Photo" name="photo" value="{{ old('photo') }}">
                         <div class="input-group col-xs-12">

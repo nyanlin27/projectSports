@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label>Upload</label>
-                        <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" type="text" placeholder="Enter Post Photo" name="photo" value="{{ old('photo') }}">
+                        <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" placeholder="Enter Post Photo" name="photo" value="{{ old('photo') }}">
                         <div class="input-group col-xs-12">
                             <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                             <span class="input-group-append">
@@ -39,7 +39,7 @@
                         </div>
                         @error('photo')
                         <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>

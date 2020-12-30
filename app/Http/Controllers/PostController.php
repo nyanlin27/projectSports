@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         // $posts = Post::orderBy('id', 'desc')->get();
-        $posts = Post::latest()->paginate(2);
+        $posts = Post::latest()->paginate(4);
         // dd($posts);
         return view('backend.posts.index', compact('posts'));
     }
@@ -27,7 +27,6 @@ class PostController extends Controller
      */
     public function create()
     {
-
         return view('backend.posts.create');
     }
 
@@ -74,7 +73,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('backend.posts.details', compact('post'));
     }
 
     /**

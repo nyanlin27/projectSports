@@ -48,3 +48,7 @@ Route::get('faq','FrontendController@faq')->name('faq');
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
 Route::resource('posts', 'PostController');
 Route::resource('leagues', 'LeagueController');
+Route::resource('teams', 'TeamController');
+Route::resource('matches', 'MatchController');
+Route::resource('results', 'ResultController');
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\League;
+use App\Team;
 use Illuminate\Http\Request;
 
 class LeagueController extends Controller
@@ -41,6 +42,7 @@ class LeagueController extends Controller
         // Validation
         $request->validate([
             'name' => 'required|min:3',
+            'country' => 'required|min:2',
             'photo' => 'required|mimes:png,jpg,jpeg'
         ]);
         //  Upload
@@ -54,6 +56,7 @@ class LeagueController extends Controller
         // Store Data
         $league = new League;
         $league->name = $request->name;
+        $league->country = $request->country;
         $league->photo = $path;
         $league->save();
         // redirect
@@ -95,6 +98,7 @@ class LeagueController extends Controller
         // Validation
         $request->validate([
             'name' => 'required|min:3',
+            'country' => 'required|min:2',
             'photo' => 'sometimes|mimes:png,jpg,jpeg'
         ]);
         //  Upload
@@ -108,6 +112,7 @@ class LeagueController extends Controller
         }
         // Store Data
         $league->name = $request->name;
+        $league->country = $request->country;
         $league->save();
         // redirect
         return redirect()->route('leagues.index');

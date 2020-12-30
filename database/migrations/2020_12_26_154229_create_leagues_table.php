@@ -17,6 +17,7 @@ class CreateLeaguesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('photo');
+            $table->string('country');
             $table->timestamps();
         });
     }
