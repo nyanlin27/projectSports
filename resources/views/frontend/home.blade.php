@@ -47,7 +47,7 @@
             
         </div>
 		<!--// Main Banner \\-->
-
+     
 		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content">
 
@@ -113,13 +113,19 @@
                             </div>
                         </div>
                         <!--// Fixture Slider \\-->
+         
+                        
+                        
+                        <!--// SideBar \\-->
+                       
+                        <!--// SideBar \\-->
 
                         <!--// Content \\-->
                         <div class="col-md-8">
                             
                             <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
-                            <div class="sportsmagazine-featured-slider">
+                            <!-- <div class="sportsmagazine-featured-slider">
                                 <div class="sportsmagazine-featured-slider-layer">
                                     <img src="{{ asset ('frontend_asset/extra-images/featured-slider-1.jpg ')}}" alt="">
                                     <span class="sportsmagazine-black-transparent"></span>
@@ -136,7 +142,7 @@
                                         <span class="sportsmagazine-color">03 December 2017 / John Maxwell</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--// Featured Slider \\-->
 
                             <!--// Latest Match Result \\-->
@@ -441,36 +447,7 @@
                                             </figcaption>
                                         </figure>
                                     </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img4.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img4.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>4 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img5.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img5.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>13 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">May 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
-                                    <li>
-                                        <figure>
-                                            <a data-fancybox-group="group" href="extra-images/gallery-modren-img6.jpg" class="fancybox"><img src="{{ asset ('frontend_asset/extra-images/gallery-modren-img6.jpg')}}" alt=""><i class="icon-signs23"></i></a>
-                                            <span>6 Photos</span>
-                                            <figcaption>
-                                                <h6><a href="#">The Champion Final will be played</a></h6>
-                                                <time datetime="2008-02-14 20:00">Feb 17th, 2017</time>
-                                            </figcaption>
-                                        </figure>
-                                    </li>
+                                   
                                 </ul>
                             </div>
 
@@ -749,15 +726,22 @@
                             <div class="widget widget_newsletter">
                                 <div class="sportsmagazine-fancy-title"><h2>Our Newsletter</h2></div>
                                 <form>
-                                    <label>Subscribe Now</label>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac malesuada ante.</p>
-                                    <input type="text" value="Your Name" onblur="if(this.value == '') { this.value ='Your Name'; }" onfocus="if(this.value =='Your Name') { this.value = ''; }">
+                                    
+                                    <!-- <input type="text" value="Your Name" onblur="if(this.value == '') { this.value ='Your Name'; }" onfocus="if(this.value =='Your Name') { this.value = ''; }">
                                     <input type="text" value="Enter Your email" onblur="if(this.value == '') { this.value ='Enter Your email'; }" onfocus="if(this.value =='Enter Your email') { this.value = ''; }">
-                                    <label class="widget_newsletter_btn"><input type="submit" value="Subscribe"></label>
+                                    <label class="widget_newsletter_btn"><input type="submit" value="Subscribe"></label> -->
+                                    <label>News One</label>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  anuttUt ac malesuada ante malesuada ante.</p>
+
+                                    <label>News One</label>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada malesuada ante.</p>
                                 </form>
                             </div>
                             <!--// Widget Newsletter \\-->
 
+
+
+                            
                             <!--// Widget Add \\-->
                             <div class="widget widget_add">
                                 <img src="{{ asset ('frontend_asset/extra-images/add.jpg')}}" alt="">
@@ -767,6 +751,7 @@
                         </aside>
                         <!--// SideBaar \\-->
 
+
 					</div>
 				</div>
 			</div>
@@ -775,4 +760,5 @@
 		</div>
 		<!--// Main Content \\-->
 
+      			
 @endsection

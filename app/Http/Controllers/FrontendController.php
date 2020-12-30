@@ -10,4 +10,12 @@ class FrontendController extends Controller
     {
         return view('frontend.home');
     }
+
+    public function premierleague($value = '')
+    {
+        return view('frontend.match.premier_league');
+    }
+
+
+    
 }

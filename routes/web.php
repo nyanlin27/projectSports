@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // For Forntend
 Route::get('/','FrontendController@index')->name('homepage');
+Route::get('premierleague','FrontendController@premierleague')->name('premierleague');
 
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');
