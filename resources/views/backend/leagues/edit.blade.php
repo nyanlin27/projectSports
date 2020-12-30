@@ -16,13 +16,20 @@
                     @method('PUT')
                     <div class="form-group">
                         <label for="exampleInputName1">League Name</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="name" value="{{ $league->name }}" id="exampleInputName1" placeholder="post title" name="name">
+                        <input type="text" class="form-control @error('name') is-invalid @enderror"   value="{{ $league->name }}" id="exampleInputName1"  >
                             @error('name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                     </div>
                     <div class="form-group">
-                        <label for="photo">League Photo</label>
+                        <label for="exampleInputName1">Country</label>
+                        <input type="text" class="form-control @error('country') is-invalid @enderror" type="text" placeholder="Enter Post Title" name="country" value="{{ $league->name }}" id="exampleInputName1" placeholder="post title" name="country">
+                            @error('country')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Upload</label>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Old Photo</a>
@@ -34,9 +41,15 @@
                           <div class="tab-content my-2" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><img src="{{ asset($league->photo) }}"  width ="300px" alt="Old Photo"></div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <input type="file" name="photo" id="photo" class="form-control-file @error('photo') is-invalid @enderror">
+                                <input type="file" name="photo" class="file-upload-default @error('photo') is-invalid @enderror" placeholder="Enter Post Photo" >
+                                <div class="input-group col-xs-12">
+                                    <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                    </span>
+                                </div>
                                 @error('photo')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                           </div>

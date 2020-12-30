@@ -18,6 +18,7 @@
                       <tr>
                         <th>No</th>
                         <th>League Name</th>
+                        <th>Country</th>
                         <th>League Photo</th>
                         <th>Action</th>
                       </tr>
@@ -28,6 +29,7 @@
                       <tr>
                         <td>{{ $i++ }}</td>
                         <td>{{ $league->name }}</td>
+                        <td>{{ $league->country }}</td>
                         <td><img src="{{ $league->photo }}" alt="League Photo"></td>
                         <td>
                             <a href="{{ route('leagues.edit', $league->id) }}" class="btn btn-primary btn-sm">Edit</a>

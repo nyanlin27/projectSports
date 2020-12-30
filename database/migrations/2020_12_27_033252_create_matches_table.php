@@ -16,10 +16,13 @@ class CreateMatchesTable extends Migration
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('league_id');
+            $table->string('match_date');
+            $table->string('match_time');
+            $table->text('description');
             $table->unsignedBigInteger('team_id');
-            $table->foreign('league_id')->references('id')->on('leagues')->onDelete('cascade');
+            $table->unsignedBigInteger('otherteam_id');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
+            // $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
             $table->timestamps();
         });
     }
