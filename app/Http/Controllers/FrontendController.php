@@ -77,6 +77,38 @@ class FrontendController extends Controller
     {
         return view('frontend.example');
     }
+    public function premier_league_table($value = '')
+    {
+        return view('frontend.premier_league_table');
+    }
+    public function laliga_table($value = '')
+    {
+        return view('frontend.laliga_table');
+    }
+    public function bundesliga_table($value = '')
+    {
+        return view('frontend.bundesliga_table');
+    }
+    public function serie_a_table($value = '')
+    {
+        return view('frontend.serie-a_table');
+    }
+    public function ligue_1_table($value = '')
+    {
+        return view('frontend.ligue_1_table');
+    }
+
+    public function champion_league_table($value = '')
+    {
+        return view('frontend.champion_league_table');
+    }
+
+    public function europa_league_table($value = '')
+    {
+        return view('frontend.europa_league_table');
+    }
+    
+
 
 
 

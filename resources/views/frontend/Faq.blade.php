@@ -101,11 +101,11 @@
                 <!--// Partner \\-->
                 <div class="sportsmagazine-fancy-title-two"><h2>Our Partners <span></span></h2></div>
                 <div class="sportsmagazine-partner-slider">
-                    <div> <a href="404.html"><img src="extra-images/partner-logo-1.jpg" alt=""></a> </div>
-                    <div> <a href="404.html"><img src="extra-images/partner-logo-2.jpg" alt=""></a> </div>
-                    <div> <a href="404.html"><img src="extra-images/partner-logo-3.jpg" alt=""></a> </div>
-                    <div> <a href="404.html"><img src="extra-images/partner-logo-1.jpg" alt=""></a> </div>
-                    <div> <a href="404.html"><img src="extra-images/partner-logo-3.jpg" alt=""></a> </div>
+                    <div> <a href="404.html"><img src="{{asset('frontend_asset/extra-images/partner-logo-1.jpg ')}}" alt=""></a> </div>
+                    <div> <a href="404.html"><img src="{{asset('frontend_asset/extra-images/partner-logo-2.jpg ')}}" alt=""></a> </div>
+                    <div> <a href="404.html"><img src="{{asset('frontend_asset/extra-images/partner-logo-3.jpg ')}}" alt=""></a> </div>
+                    <div> <a href="404.html"><img src="{{asset('frontend_asset/extra-images/partner-logo-1.jpg ')}}" alt=""></a> </div>
+                    <div> <a href="404.html"><img src="{{asset('frontend_asset/extra-images/partner-logo-3.jpg ')}}" alt=""></a> </div>
                 </div>
                 <!--// Partner \\-->
             </div>

@@ -43,6 +43,17 @@ Route::get('example','FrontendController@example')->name('example');
 //contact
 Route::get('contact','FrontendController@contact')->name('contact');
 Route::get('faq','FrontendController@faq')->name('faq');
+Route::get('premier_league_table','FrontendController@premier_league_table')->name('premier_league_table');
+Route::get('laliga_table','FrontendController@laliga_table')->name('laliga_table');
+Route::get('laliga_table','FrontendController@laliga_table')->name('laliga_table');
+Route::get('serie-a_table','FrontendController@serie_a_table')->name('serie_a_table');
+Route::get('ligue_1_table','FrontendController@ligue_1_table')->name('ligue_1_table');
+Route::get('bundesliga_table','FrontendController@bundesliga_table')->name('bundesliga_table');
+
+Route::get('champion_league_table','FrontendController@champion_league_table')->name('champion_league_table');
+
+
+Route::get('europa_league_table','FrontendController@europa_league_table')->name('europa_league_table');
 
 // For Backend
 Route::get('dashboard', 'BackendController@dashboard')->name('dashboardpage');

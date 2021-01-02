@@ -109,12 +109,12 @@
                                     </div>
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                       <ul class="nav navbar-nav">
-                                        <li class="active"><a href="#">Home</a>
-                                            <ul class="sportsmagazine-dropdown-menu">
+                                        <li class="active"><a href="{{route('homepage')}}">Home</a>
+                                            <!-- <ul class="sportsmagazine-dropdown-menu">
                                                 <li><a href="index-2.html">Home One</a></li>
                                                 <li><a href="index-two.html">Home Two</a></li>
                                                 
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         
                                         <li class="sportsmagazine-megamenu-li"><a href="#">Our News</a>
@@ -177,14 +177,23 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="#">OUR NEWS</a>
+                                        <li><a href="#">Tables</a>
                                             <ul class="sportsmagazine-dropdown-menu">
-                                                <li><a href="{{route('modern_news')}}">Modern</a>
+                                                <li><a href="{{route('champion_league_table')}}">Champion league</a>
                                                 </li>
-                                                <li><a href="{{route('blog_news')}}">Blog</a>
+                                                <li><a href="{{route('europa_league_table')}}">Europa league</a>
                                                 </li>
-                                                <li><a href="{{route('grid_news')}}">Grid</a>
+                                                <li><a href="{{route('premier_league_table')}}">Premier league</a>
                                                 </li>
+                                                <li><a href="{{route('laliga_table')}}">Laliga</a>
+                                                </li>
+                                                <li><a href="{{route('serie_a_table')}}">Serie A</a>
+                                                </li>
+                                                <li><a href="{{route('bundesliga_table')}}">Bundesliga</a>
+                                                </li>
+                                                <li><a href="{{route('ligue_1_table')}}">Ligue 1</a>
+                                                </li>
+                                                
                         
                                             </ul>
                                         </li>
