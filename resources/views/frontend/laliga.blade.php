@@ -7,12 +7,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Fixtures</h1>
+                        <h1>Laliga</h1>
                     </div>
                     <div class="col-md-12">
                         <ul class="sportsmagazine-breadcrumb">
                             <li><a href="index-2.html">Home</a></li>
-                            <li>Fixtures</li>
+                            <li>Matche</li>
+                            <li>Laliga</li>
+
                         </ul>
                     </div>
                 </div>
@@ -46,7 +48,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img2.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img2.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -66,7 +68,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img3.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img3.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -77,7 +79,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img4.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img4.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -97,7 +99,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img2.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img2.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -108,7 +110,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img3.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img3.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -128,7 +130,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img4.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img4.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -139,7 +141,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img1.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img1.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -159,7 +161,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img3.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img3.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -170,7 +172,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img2.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img2.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -190,7 +192,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img4.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img4.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -201,7 +203,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img3.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img3.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -221,7 +223,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img1.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img1.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -232,7 +234,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img2.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img2.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
@@ -252,7 +254,7 @@
                                         <div class="sportsmagazine-fixture-wrap">
                                             <div class="sportsmagazine-teams-match">
                                                 <div class="sportsmagazine-first-team">
-                                                    <figure><img src="extra-images/team-match-img2.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img2.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-first-team-info">
                                                         <h6><a href="404.html">Yorkshire</a></h6>
                                                         <span>Bepop Institute</span>
@@ -263,7 +265,7 @@
                                                     <span>VS</span>
                                                 </div>
                                                 <div class="sportsmagazine-second-team">
-                                                    <figure><img src="extra-images/team-match-img1.png" alt=""></figure>
+                                                    <figure><img src="{{asset('frontend_asset/extra-images/team-match-img1.png')}}" alt=""></figure>
                                                     <div class="sportsmagazine-second-team-info">
                                                         <h6><a href="404.html">Sharks Club</a></h6>
                                                         <span>Marine College</span>
