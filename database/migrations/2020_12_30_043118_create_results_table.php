@@ -15,10 +15,10 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('homegoal');
-            $table->smallInteger('awaygoal');
             $table->smallInteger('hometeam_id');
             $table->smallInteger('awayteam_id');
+            $table->smallInteger('home_goal');
+            $table->smallInteger('away_goal');
             $table->unsignedBigInteger('match_id');
             $table->foreign('match_id')->references('id')->on('matches')->onDelete('cascade');
             $table->timestamps();

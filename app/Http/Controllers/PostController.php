@@ -84,7 +84,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('backend.posts.edit', compact('post'));
+        // return view('backend.posts.edit', compact('post'));
     }
 
     /**

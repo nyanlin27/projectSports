@@ -200,7 +200,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#team" aria-expanded="false" aria-controls="team">
-                    <i class="mdi mdi-folder menu-icon"></i>
+                    <i class="mdi mdi-flag menu-icon"></i>
                   <span class="menu-title">Team</span>
                   <i class="menu-arrow"></i>
                 </a>
@@ -214,7 +214,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#match" aria-expanded="false" aria-controls="match">
-                    <i class="mdi mdi-grid-large menu-icon"></i>
+                    <i class="mdi mdi-dribbble menu-icon"></i>
                   <span class="menu-title">Match</span>
                   <i class="menu-arrow"></i>
                 </a>
@@ -226,6 +226,37 @@
                   </ul>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#result" aria-expanded="false" aria-controls="result">
+                    <i class="mdi mdi-menu menu-icon"></i>
+                  <span class="menu-title">result</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="result">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('results.create') }}">
+                      Create Result</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('results.index') }}">Result Table</a></li>
+                  </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#table" aria-expanded="false" aria-controls="table">
+                    <i class="mdi mdi-poll menu-icon"></i>
+                  <span class="menu-title">Table</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="table">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href=""> Seri A</a></li>
+                    {{-- @foreach($leagues as $league)
+                        <li><a href="">{{ $league->name }}</a></li>
+                    @endforeach --}}
+                  </ul>
+                </div>
+            </li>
+
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboardpage') }}">
                   <i class="mdi mdi-home menu-icon"></i>

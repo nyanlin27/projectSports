@@ -24,11 +24,13 @@
 
                     <div class="form-group">
                         <label for="exampleSelectGender">Leagues</label>
-                          <select class="form-control" id="exampleSelectGender" name="league_id">
+                          <select class="form-control @error('league_id') is-invalid @enderror" id="exampleSelectGender" name="league_id" value="{{ old('league_id') }}">
                             @foreach($leagues as $league)
                                 <option value="{{ $league->id }}">{{ $league->name }}</option>
                             @endforeach
-
+                            @error('league_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                           </select>
                     </div>
                     <div class="form-group">

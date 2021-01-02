@@ -14,8 +14,4 @@ class Team extends Model
     {
         return $this->belongsTo('App\League');
     }
-    public function matches()
-    {
-        return $this->hasMany('App\Matche');
-    }
 }

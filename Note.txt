@@ -118,6 +118,9 @@ SPORTS
             - Team One VS Team Two
 
 
+php -S localhost:8000 -t public
+
+
 
 
 

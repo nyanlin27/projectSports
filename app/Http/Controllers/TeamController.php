@@ -99,7 +99,7 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
-         // dd($request);
+        // dd($request);
         // Validation
         $request->validate([
             'name' => 'required|min:3',

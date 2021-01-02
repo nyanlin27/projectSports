@@ -17,12 +17,9 @@ class Match extends Model
     {
         return $this->belongsTo('App\Team', 'otherteam_id');
     }
-    public function results()
+    public function result()
     {
-        return $this->hasMany('App\Result');
+        return $this->hasOne('App\Result');
     }
-    public function otherteam_id()
-    {
-        return $this->belongsTo('App\Team', 'otherteam_id');
-    }
+
 }

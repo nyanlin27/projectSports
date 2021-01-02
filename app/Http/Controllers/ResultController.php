@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Result;
 use App\Match;
+use App\Team;
 use Illuminate\Http\Request;
 
 class ResultController extends Controller
@@ -15,7 +16,11 @@ class ResultController extends Controller
      */
     public function index()
     {
-        return view('backend.results.index');
+        $teams = Team::orderBy('id', 'desc')->get();
+        $results = Result::orderBy('id', 'desc')->get();
+        return view('backend.results.index', compact('teams', 'results'));
+        // dd($matches);
+        // return view('backend.matches.index', compact('matches'));
     }
 
     /**
@@ -25,11 +30,11 @@ class ResultController extends Controller
      */
     public function create()
     {
-        // $teams = Team::all();
         // $leagues = League::all();
+        $teams = Team::all();
         $matches = Match::all();
         // dd($teams);
-        return view('backend.results.create', compact('matches'));
+        return view('backend.results.create', compact('matches', 'teams'));
     }
 
     /**
@@ -40,7 +45,26 @@ class ResultController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        // Validation
+        $request->validate([
+            'match_id' => 'required',
+            'hometeam_id' => 'required',
+            'awayteam_id' => 'required',
+            'home_goal'=>'required',
+            'away_goal'=>'required',
+        ]);
+
+        // Store Data
+        $result = new Result();
+        $result->match_id = $request->match_id;
+        $result->hometeam_id = $request->hometeam_id;
+        $result->awayteam_id = $request->awayteam_id;
+        $result->home_goal = $request->home_goal;
+        $result->away_goal = $request->away_goal;
+        $result->save();
+        // redirect
+        return redirect()->route('results.index');
     }
 
     /**

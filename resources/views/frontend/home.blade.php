@@ -44,10 +44,10 @@
                 </div>
             </div>
             <!--// Slider \\-->
-            
+
         </div>
 		<!--// Main Banner \\-->
-     
+
 		<!--// Main Content \\-->
 		<div class="sportsmagazine-main-content">
 
@@ -55,11 +55,11 @@
 			<div class="sportsmagazine-main-section">
 				<div class="container">
 					<div class="row">
-						
+
                         <!--// Fixture Slider \\-->
 						<div class="col-md-12">
                             <div class="sportsmagazine-fixture-slider">
-                                
+
                                 <div class="sportsmagazine-fixture-slider-layer">
                                     <time datetime="2008-02-14 20:00">August 23, 2016</time>
                                     <ul class="sportsmagazine-bgcolor">
@@ -113,16 +113,16 @@
                             </div>
                         </div>
                         <!--// Fixture Slider \\-->
-         
-                        
-                        
+
+
+
                         <!--// SideBar \\-->
-                       
+
                         <!--// SideBar \\-->
 
                         <!--// Content \\-->
                         <div class="col-md-8">
-                            
+
                             <!--// Fancy Title \\--> <div class="sportsmagazine-fancy-title"><h2>Featured News</h2></div> <!--// Fancy Title \\-->
                             <!--// Featured Slider \\-->
                             <!-- <div class="sportsmagazine-featured-slider">
@@ -174,17 +174,18 @@
                             <!--// Blog's \\-->
                             <div class="sportsmagazine-blog sportsmagazine-blog-grid">
                                 <ul class="row">
+                                    @foreach($posts as $post)
                                     <li class="col-md-6">
                                         <figure>
-                                            <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-1.jpg ')}}" alt=""></a>
+                                            <a href="blog-detail.html"><img src="{{ $post->photo }}" alt=""></a>
                                             <figcaption>
                                                 <span><small>Featured</small></span>
                                                 <a href="blog-detail.html" class="sportsmagazine-link-btn"><i class="fa fa-link"></i></a>
                                             </figcaption>
                                         </figure>
                                         <section>
-                                            <h2><a href="blog-detail.html">The new eco friendly stadium won a Leafy Award in 2016</a></h2>
-                                            <p>Lorem ipsum dolor sit amet, consecttur adipis elit. Vestibulum a nunc dui. Curabitr dignissi luctus nisi id euismod. feugiat eros. Pellentesque tempus tortor.</p>
+                                            <h2><a href="blog-detail.html">{{ $post->name }}</a></h2>
+                                                <p>{{ Str::limit($post->description, 200) }}</p>
                                         </section>
                                         <div class="sportsmagazine-blog-grid-options">
                                             <a href="blog-detail.html" class="sportsmagazine-blog-grid-thumb"><img src="{{ asset ('frontend_asset/extra-images/blog-thumb-1.jpg ')}}" alt=""> Julia Martyn</a>
@@ -195,6 +196,7 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    @endforeach
                                     <li class="col-md-6 sportsmagazine-the-league">
                                         <figure>
                                             <a href="blog-detail.html"><img src="{{ asset ('frontend_asset/extra-images/latest-blog-2.jpg ') }}" alt=""></a>
@@ -447,7 +449,7 @@
                                             </figcaption>
                                         </figure>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
 
@@ -456,7 +458,7 @@
 
                         <!--// SideBaar \\-->
                         <aside class="col-md-4">
-                            
+
                             <!--// Widget TeamRanking \\-->
                            <!--  <div class="widget widget_team_ranking">
                                 <div class="sportsmagazine-fancy-title"><h2>Team Rankings</h2></div>
@@ -719,14 +721,14 @@
                             <!--// Widget Trending News \\-->
 
                             <!--// Widget Next Match \\-->
-                           
+
                             <!--// Widget Next Match \\-->
 
                             <!--// Widget Newsletter \\-->
                             <div class="widget widget_newsletter">
                                 <div class="sportsmagazine-fancy-title"><h2>Our Newsletter</h2></div>
                                 <form>
-                                    
+
                                     <!-- <input type="text" value="Your Name" onblur="if(this.value == '') { this.value ='Your Name'; }" onfocus="if(this.value =='Your Name') { this.value = ''; }">
                                     <input type="text" value="Enter Your email" onblur="if(this.value == '') { this.value ='Enter Your email'; }" onfocus="if(this.value =='Enter Your email') { this.value = ''; }">
                                     <label class="widget_newsletter_btn"><input type="submit" value="Subscribe"></label> -->
@@ -741,7 +743,7 @@
 
 
 
-                            
+
                             <!--// Widget Add \\-->
                             <div class="widget widget_add">
                                 <img src="{{ asset ('frontend_asset/extra-images/add.jpg')}}" alt="">
@@ -760,5 +762,5 @@
 		</div>
 		<!--// Main Content \\-->
 
-      			
+
 @endsection

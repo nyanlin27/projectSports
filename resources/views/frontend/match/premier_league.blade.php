@@ -1,7 +1,6 @@
 @extends('frontend_master')
 @section('content')
 
-
 	<!--// SubHeader \\-->
         <div class="sportsmagazine-subheader">
             <span class="subheader-transparent"></span>
@@ -28,7 +27,7 @@
 			<div class="sportsmagazine-main-section sportsmagazine-fixture-listfull">
 				<div class="container">
 					<div class="row">
-						
+
 						<div class="col-md-12">
                             <div class="sportsmagazine-fixture sportsmagazine-fixture-list">
                                 <ul class="row">

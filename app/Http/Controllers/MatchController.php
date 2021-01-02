@@ -29,11 +29,8 @@ class MatchController extends Controller
     public function create()
     {
         $teams = Team::all();
-        $leagues = League::all();
         // dd($teams);
-        return view('backend.matches.create', compact('teams', 'leagues'));
-
-
+        return view('backend.matches.create', compact('teams'));
     }
 
     /**
@@ -49,8 +46,8 @@ class MatchController extends Controller
             'name' => 'required|min:3',
             'match_date' => 'required',
             'match_time' => 'required',
-            'team_id'=>'required',
-            'otherteam_id'=>'required',
+            'team_id' => 'required',
+            'otherteam_id' => 'required',
             'description' => 'required|min:3',
         ]);
 
@@ -86,7 +83,8 @@ class MatchController extends Controller
      */
     public function edit(Match $match)
     {
-        //
+        $teams = Team::all();
+        return view('backend.matches.edit', compact('match', 'teams'));
     }
 
     /**
@@ -98,7 +96,26 @@ class MatchController extends Controller
      */
     public function update(Request $request, Match $match)
     {
-        //
+        // Validation
+        $request->validate([
+            'name' => 'required|min:3',
+            'match_date' => 'required',
+            'match_time' => 'required',
+            'team_id' => 'required',
+            'otherteam_id' => 'required',
+            'description' => 'required|min:3',
+        ]);
+
+        // Store Data
+        $match->name = $request->name;
+        $match->match_date = $request->match_date;
+        $match->match_time = $request->match_time;
+        $match->team_id = $request->team_id;
+        $match->otherteam_id = $request->otherteam_id;
+        $match->description = $request->description;
+        $match->save();
+        // redirect
+        return redirect()->route('matches.index');
     }
 
     /**
@@ -109,6 +126,7 @@ class MatchController extends Controller
      */
     public function destroy(Match $match)
     {
-        //
+        $match->delete();
+        return redirect()->route('matches.index');
     }
 }

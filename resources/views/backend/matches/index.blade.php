@@ -18,10 +18,10 @@
                       <tr>
                         <th>No</th>
                         <th>Match Name</th>
-                        <th>Match Date</th>
-                        <th>Match Name</th>
                         <th>Home Match</th>
                         <th>Away Match</th>
+                        <th>Match Date</th>
+                        <th>Match Time</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -33,10 +33,11 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $match->name }}</td>
+                                <td> <img src="{{ $match->team->photo }}" alt="Team Logo"> {{ $match->team->name }}</td>
+                                <td> <img src="{{$match->otherteam->photo}}" alt="Team Logo"> {{ $match->otherteam->name }}</td>
                                 <td>{{ $match->match_date }}</td>
                                 <td>{{ $match->match_time }}</td>
-                                <td>{{ $match->team->name }}</td>
-                                <td>{{ $match->otherteam->name }}</td>
+
                                 <td>
                                     <a href="{{ route('matches.edit', $match->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                       <form action="{{ route('matches.destroy', $match->id) }}" method="POST" onsubmit="return confirm('Are You Sure Want To Delete')" class="d-inline-block">
