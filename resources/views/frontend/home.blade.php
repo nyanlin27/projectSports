@@ -1,5 +1,6 @@
 @extends('frontend_master')
-@section('content')
+@section('content') 
+        <div>testing</div>
 
 		<!--// Main Banner \\-->
 		<div class="sportsmagazine-banner">

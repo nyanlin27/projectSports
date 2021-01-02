@@ -55,10 +55,6 @@ class FrontendController extends Controller
     {
         return view('frontend.Grid_news');
     }
-<<<<<<< HEAD
-=======
-
-
     public function shop_gallery($value = '')
     {
         return view('frontend.shop_gallery');
@@ -113,15 +109,4 @@ class FrontendController extends Controller
     }
     
 
-
-
-
-
-    
-
-
-
-
-    
->>>>>>> 136cb395f04377472342a19d494227172e359f8d
 }
